@@ -1,0 +1,280 @@
+/* основные стили для страницы */
+
+body {
+  margin: 0; /* убираем стандартный отступ для тела страницы body */
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /*назначаем основной шрифт (преобладающий) для всей страницы */
+  background-color: #1e1e1e; /* задаем общий фон страницы */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0; /*убираем внешние отступы у заголовков, параграфов и списков */
+  padding: 0; /*убираем внутренние отступы у заголовков, параграфов и списков */
+  font-size: 100%; /*устанавливаем единый размер шрифта для всех элементов */
+  font-weight: normal; /*задаем толщину шрифта */
+}
+
+a {
+  text-decoration: none;
+}
+
+.content-section {
+  width: 360px; /*задаем общую ширину для контента  */
+  margin: 0 auto; /*центрируем контент по середине*/
+  padding: 0 20px;
+  box-sizing: border-box; 
+}
+
+.content-section_theme_dark {
+  background-color: #131313; /* задаем общий фон для секций темной темы */
+}
+
+.content-section_theme_bright {
+  background-color: #FEE42A; /* задаем общий фон для секций светлой темы */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+
+}
+
+.header__logo-image {
+  width: 78px;
+}
+
+.header__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header__menu-item  {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  list-style: none; /*убираем маркеры у списка */
+}
+
+.header__menu-item_active {
+  text-decoration: none;
+  color: #FEE42A;
+}
+
+.header__menu-link {
+  text-decoration: underline;
+  color: #F5F5F5;
+}
+
+.header__menu-link:hover {
+  color: #FEE42A;
+  text-decoration: underline;
+}
+
+.cover {
+  background-image: url(/images/cover.svg);
+  background-size: 95% auto;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  min-height: 220px;
+  padding-bottom: 30px;
+}
+
+.cover__title {
+  font-family: 'Ebgaramond medium';
+  font-size: 72px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.accent-span {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 40px;
+}
+
+.intro__heading {
+  display: flex;
+  justify-content: space-between;
+  color: #CCCCCC;
+}
+
+.intro__title {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.intro__date {
+  white-space: nowrap;
+}
+
+.intro__main-text {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: #F5F5F5;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 20px;
+}
+
+.content-section__subtitle {
+  font-family: 'Ebgaramond medium','Times New Roman', Times, serif;
+  font-size: 28px;
+  line-height: 115%;
+}
+
+.content-section__introduction{
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.content-section__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  gap: 16px;
+}
+
+.content-section__list-item {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+.content-section__list-accent {
+  font-family: 'Inter bold', Arial, Helvetica, sans-serif;
+}
+
+.how-to {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 30px;
+  color: #F5F5F5;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.card_text-only {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.card_theme_dark {
+  background-color: #343434;
+  color: #F5F5F5;
+}
+
+.card_theme_bright {
+  background-color: #FEE42A;
+  color: #131313;
+}
+
+.card__author {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__author-photo {
+  width: 100px; /*поскольку фото автора не является фоновым изображением, необходимо задать свойство ширины*/
+  height: auto; /*добавляет свойство высоты со значением auto для сохранения пропорций при изменении ширины*/
+}
+
+.card__author-name {
+  font-family: 'Inter bold', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 135%;
+  color: #F5F5F5;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__title {
+  font-family: 'Ebgaramond medium','Times New Roman', Times, serif;
+  font-display: swap;
+  font-size: 22px;
+  line-height: 135%;
+}
+
+.card__text {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #FEE42A;
+  min-height: 62px;
+}
+
+.footer__copy {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 135%;
+  color: #F5F5F5;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  color: #FEE42A;
+}

@@ -1,0 +1,38 @@
+@font-face {
+  src: local('Inter Regular'),
+    local('inter regular'),
+    url(/fonts/interregular.ttf) format('truetype'),
+    url(/fonts/interregular.woff) format('woff'),
+    url(/fonts/interregular.woff2) format('woff2');
+  font-family: 'Inter regular';
+}
+
+@font-face {
+  src: local('Inter Bold'),
+    local('inter bold'),
+    local('inter-bold'),
+    url(/fonts/interbold.ttf) format('truetype'),
+    url(/fonts/interbold.woff) format('woff'),
+    url(/fonts/interbold.woff2) format('woff2');
+  font-family: 'Inter bold';
+}
+
+@font-face {
+  src: local('Ebgaramond Regular'),
+    local('ebgaramond regular'),
+    local('ebgaramond-regular'),
+    url(/fonts/ebgaramondregular.ttf) format('typetrue'),
+    url(/fonts/ebgaramondregular.woff) format('woff'),
+    url(/fonts/ebgaramondregular.woff2) format('woff2');
+  font-family: 'Ebgaramond regular';
+}
+
+@font-face {
+  src: local('Ebgaramond Medium'),
+    local('ebgaramond medium'),
+    local('ebgaramond-medium'),
+    url(/fonts/ebgaramondmedium.ttf) format('typetrue'),
+    url(/fonts/ebgaramondmedium.woff) format('woff'),
+    url(/fonts/ebgaramondmedium.woff2) format('woff2');
+  font-family: 'Ebgaramond medium';
+}
