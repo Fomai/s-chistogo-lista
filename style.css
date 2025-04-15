@@ -1,0 +1,320 @@
+/* Основные стили для страницы */
+body {
+  margin: 0; /* убираем стандартный отступ для всей страницы */
+  font-family: 'Inter regulaer', Arial, Helvetica, sans-serif; /* определяем преобладающий шрифт для станицы */
+  background-color: #1e1e1e; /* задаем общий фон страницы */
+  color: #f5f5f5; /* задаем общий цвет текста */
+}
+
+/* Обнуляем стили у заголовков и параграфов */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0; /* убираем внешние отступы у заголовков, параграфов и списков */
+  padding: 0; /* убираем внутренние отступы у заголовков, параграфов и списков */
+  font-size: 100%; /* устанавливаем единый размер шрифта для всех элементов */
+  font-weight: normal; /* задаем толщину шрифта */
+}
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ КОНТЕНТА--- */
+
+/* Стиль для всех секций */
+.content-section {
+  width: 360px; /* задаем общую ширину для контента */
+  margin: 0 auto; /* центрируем контент по середине */
+  box-sizing: border-box; /* учитываем отступы и границы в ширине и высоте элемента */
+  padding: 0 20px; /* задаем внутренние боковые отступы для контента */
+}
+
+/* Темная тема для секций */
+.content-section_theme_dark {
+  background-color: #131313; /* задаем общий фон для секций темной темы */
+}
+
+/* Светлая тема для секций */
+.content-section_theme_bright {
+  background-color: #FEE42A; /* задаем общий фон для секций светлой темы */
+}
+
+.content-section__subtitle {
+  font-family: 'EB Garamond', 'Times New Roman', serif; /* задаем шрифт для подзаголовка */
+  font-display: swap;
+  font-size: 28px;
+  line-height: 115%; /* 32.2px */
+}
+
+.content-section__list {
+  display: flex;
+  flex-direction: column; /* задаем вертикальное расположение элементов */
+  gap: 16px; /* задаем расстояние между элементами */
+  padding-left: 20px; /* задаем отступ слева для списка */
+}
+
+.content-section__list-item {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* задаем шрифт для текста в списке */
+  font-size: 16px; /* задаем размер шрифта для текста в списке */;
+  line-height: 21.6px; /* задаем высоту строки для текста в списке */
+
+}
+
+.content-section__list-accent {
+  font-family: 'Inter bold', Arial, Helvetica, sans-serif; /* задаем шрифт для выделенного текста */
+}
+
+.content-section__introduction {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* задаем шрифт для основного текста */
+  font-size: 20px; /* задаем размер шрифта для основного текста */
+  line-height: 27px; /* задаем высоту строки для основного текста */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ КОНТЕНТА--- */
+
+/* ШАПКА САЙТА */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 20px;
+}
+
+.header__logo {
+  display: inline-block; /* задаем блочно-строчный элемент для логотипа для дальнейшего определения размеров */
+  width: 78px; /* задаем ширину логотипа */
+  height: auto; /* высота будет определяться автоматически в зависимости от ширины */
+}
+
+.header__logo-image {
+  background-image: url('./images/logo.svg'); /* путь к изображению логотипа */
+  background-repeat: no-repeat; /* убираем повторение изображения */
+  background-size: contain; /* подгоняем изображение по размеру блока */
+}
+
+/* ---МЕНЮ НАВИГАЦИИ--- */
+
+/* Не смог найти никакого другого способа приминения стилей для этого класса кроме как назначения шрифта */
+.header__menu {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* определяем шрифт для меню */
+  font-size: 16px; /* задаем размер шрифта для ссылок */
+  line-height: 19.2px; /* задаем высоту строки для ссылок */
+}
+
+.header__menu-list {
+  display: flex;  
+  flex-direction: column; /* задаем вертикальное расположение элементов меню */
+  gap: 12px; /* задаем расстояние между элементами меню */
+}
+
+.header__menu-item {
+  list-style: none; /* убираем маркеры у списка */
+}
+
+.header__menu-link {
+  text-decoration: underline; /* подчеркиваем ссылки */
+  color: #F5F5F5; /* задаем цвет ссылок */
+}
+
+.header__menu-link_active {
+  text-decoration: none; /* убираем подчеркивание у активной ссылки */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ ШАПКИ САЙТА--- */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ ОБЛОЖКИ--- */
+
+.cover {
+  background-image: url('./images/cover.svg'); /* путь к изображению обложки */
+  background-repeat: no-repeat; /* убираем повторение изображения */
+  background-size: 96% auto; /* подгоняем изображение по размеру блока */
+  background-position: 20px;
+  min-height: 198px; /* задаем минимальную высоту блока обложки */
+  padding: 8px 20px 30px;
+}
+
+.cover__title {
+  font-family: 'Ebgaramond regular', 'Times New Roman', serif; /* задаем шрифт для заголовка */
+  font-size: 72px; /* задаем размер для заголовка первого уровня */
+  font-display: swap; /* задаем параметр, который будет отображать доп. шрифты, в случае, если основной не прогрузился */
+  line-height: 100%; /* задаем высоту строки для заголовка */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ ОБЛОЖКИ--- */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ РАБОТЫ С ТЕКСТОМ--- */
+
+.accent-span {
+  display: block; /* задаем блочный элемент для выделения текста */
+}
+
+.text-center {
+  text-align: center; /* выравниваем текст по центру */
+}
+
+.text-right {
+  text-align: right; /* выравниваем текст по правому краю */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ РАБОТЫ С ТЕКСТОМ--- */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ СЕКЦИИ [INTRO] */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #ccc;
+  padding-bottom: 40px;
+}
+
+.intro__heading {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.intro__title {
+  font-family: 'Intro regular', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.intro__date {
+  white-space: nowrap; /* убираем перенос текста на новую строку */
+}
+
+.intro__main-text {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* задаем шрифт для основного текста */
+  font-size: 16px; /* задаем размер шрифта для основного текста */
+  line-height: 21.6px; /* задаем высоту строки для основного текста */
+  color: #F5F5F5; /* задаем цвет основного текста */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ СЕКЦИИ [INTRO]--- */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ СЕКЦИИ [REASONS] */
+
+.reasons {
+  display: flex;
+  flex-direction: column; /* задаем вертикальное расположение элементов */
+  gap: 32px; /* задаем расстояние между элементами */
+  padding: 40px 20px;
+  color: #131313; /* задаем цвет текста */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ СЕКЦИИ [REASONS] */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ СЕКЦИИ [HOW-TO] */
+
+.how-to {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 40px 20px 60px; /* задаем отступы для секции */
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* задаем расстояние между карточками */
+  list-style: none;
+  
+}
+
+.card, .card__text-only {
+  display: flex; 
+  flex-direction: column; /* задаем вертикальное расположение элементов */
+  gap: 8px; /* задаем расстояние между элементами */
+  overflow: hidden;
+  border-radius: 32px; /* задаем скругление углов */
+  padding: 20px;
+}
+
+.card_theme_dark {
+  background-color: #343434; /* задаем общий фон для карточек темной темы */
+  color: #F5F5F5; /* задаем цвет текста для карточек темной темы */
+}
+
+.card_theme_bright {
+  background-color: #FEE42A; /* задаем общий фон для карточек светлой темы */
+  color: #131313; /* задаем цвет текста для карточек светлой темы */
+}
+
+.card__author {
+  display: flex; 
+  flex-direction: column;
+  gap: 8px;
+  }
+
+.card__author-photo {
+  display: inline-block;
+  width: 100px;
+  height: auto;
+}
+
+.card__author-name {
+  font-family: 'Inter bold', Arial, Helvetica, sans-serif; /* задаем шрифт для имени автора */
+  font-display: swap;
+  font-style: normal;
+  font-size: 16px; /* задаем размер шрифта для имени автора */
+  line-height: 21.6px; /* задаем высоту строки для имени автора */
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__title {
+  font-family: 'Ebgaramond medium', 'Times New Roman', Times, serif;
+  font-display: swap;
+  font-size: 22px;
+  line-height: 135%;
+}
+
+.card__text {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ СЕКЦИИ [HOW-TO]--- */
+
+/* ---НАЧАЛО СТИЛЕЙ ДЛЯ ПОДВАЛА САЙТА [FOOTER]--- */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* задаем равномерное распределение элементов по горизонтали */
+  padding: 20px;
+  border-top: 1px solid #FEE42A;
+}
+
+.footer__copy {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* задаем шрифт для текста в подвале */
+  font-display: swap;
+  font-size: 16px; /* задаем размер шрифта для текста в подвале */
+  line-height: 21.6px; /* задаем высоту строки для текста в подвале */
+  color: #F5F5F5; /* задаем цвет текста в подвале */
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row; /* задаем горизонтальное расположение элементов */
+  gap: 16px; /* задаем расстояние между элементами */
+  align-items: right; /* выравниваем элементы по правому краю */
+}
+
+.footer__links-item {
+  list-style: none; /* убираем маркеры у списка */
+}
+
+.footer__link {
+  font-family: 'Inter regular', Arial, Helvetica, sans-serif; /* задаем шрифт для ссылок в подвале */
+  font-size: 14px;
+  line-height: 125%;
+  color: #F5F5F5; /* задаем цвет ссылок в подвале */
+  text-decoration: none; /* убираем подчеркивание у ссылок */
+}
+
+/* ---КОНЕЦ СТИЛЕЙ ДЛЯ ПОДВАЛА САЙТА [FOOTER] */
