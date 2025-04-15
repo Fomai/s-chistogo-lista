@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 .header__logo-image {
-  background-image: url('./images/logo.svg'); /* путь к изображению логотипа */
+  background-image: url('../images/logo.svg'); /* путь к изображению логотипа */
   background-repeat: no-repeat; /* убираем повторение изображения */
   background-size: contain; /* подгоняем изображение по размеру блока */
 }
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 /* ---НАЧАЛО СТИЛЕЙ ДЛЯ ОБЛОЖКИ--- */
 
 .cover {
-  background-image: url('./images/cover.svg'); /* путь к изображению обложки */
+  background-image: url('../images/cover.svg'); /* путь к изображению обложки */
   background-repeat: no-repeat; /* убираем повторение изображения */
   background-size: 96% auto; /* подгоняем изображение по размеру блока */
   background-position: 20px;
